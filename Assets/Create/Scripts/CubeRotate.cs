@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class CubeRotate : MonoBehaviour
 {
-    float RotateSpeed;
+    public float RotateSpeed;
 
     void Start()
     {
-        RotateSpeed = 0.1f;
+        RotateSpeed = 20f;
     }
 
 
     void Update()
     {
-        transform.Rotate(0, RotateSpeed, 0);
+        transform.Rotate(0, RotateSpeed * Time.deltaTime, 0);
     }
 
     public void RotateDirectionChange()
